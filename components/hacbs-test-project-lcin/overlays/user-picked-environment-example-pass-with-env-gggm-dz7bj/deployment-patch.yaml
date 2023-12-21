@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: hacbs-test-project-lcin
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - env:
+        - name: var_name
+          value: test
+        image: quay.io/redhat-appstudio-qe/nbe-e2e-dyqj-tenant/integ-app-lalc/hacbs-test-project-lcin@sha256:f18e4dacf9e5cd56e6943151a3d62626a083fcca555ecc6ccefbab0d9cc0d468
+        name: hacbs-jvm-build-test-project
+        resources: {}
+status: {}
